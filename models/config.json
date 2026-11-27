@@ -1,0 +1,293 @@
+{
+  "config": {
+    "window": 3,
+    "hidden": [
+      32,
+      16
+    ],
+    "latent": 3,
+    "epochs": 200,
+    "lr": 0.002,
+    "noise": 0.05,
+    "healthy_fraction": 0.4,
+    "alpha": 0.15,
+    "median_window": 5,
+    "warmup": 20,
+    "quantile": 0.995,
+    "margin": 1.0,
+    "patience": 3,
+    "critical_mult": 3.0,
+    "seed": 0,
+    "features": [
+      "load",
+      "bearing_temp",
+      "vibration",
+      "motor_current",
+      "oil_pressure",
+      "outlet_pressure",
+      "flow_rate",
+      "rpm",
+      "coolant_temp"
+    ],
+    "unit_col": "unit",
+    "cycle_col": "cycle",
+    "method": "autoencoder",
+    "threshold": 3.852888651607006,
+    "sensor_baseline": [
+      0.03608529207961435,
+      0.04494975238693849,
+      0.19993633767833177,
+      0.041023730599629375,
+      0.22315073024375615,
+      0.050885293234702755,
+      0.09201086902736529,
+      0.143863732253618,
+      0.07333298353534769
+    ],
+    "failure_level": 48.41364916019862
+  },
+  "scaler": {
+    "mean": [
+      76.5483674755751,
+      67.1758805546801,
+      2.0630170185943943,
+      13.891778127954645,
+      3.8789785691774323,
+      6.206036243302867,
+      141.77677119445323,
+      1457.8535222187197,
+      37.740483769303516
+    ],
+    "std": [
+      20.525798856625627,
+      6.149232371611834,
+      0.2711376070918854,
+      2.7420551093003227,
+      0.10788865719777746,
+      0.45502594615140424,
+      5.4385006569935745,
+      10.506378749137243,
+      2.1707311945101444
+    ]
+  },
+  "metrics": {
+    "autoencoder": {
+      "machines_tested": 15,
+      "detection_rate": 0.933,
+      "false_alarm_machines": 0.067,
+      "false_alarm_cycle_rate": 0.0013,
+      "mean_lead_time_cycles": 32.1,
+      "median_lead_time_cycles": 27.5,
+      "min_lead_time_cycles": 18,
+      "auroc_last_50_cycles": 0.9443,
+      "rul_mae_after_alarm": 46.6,
+      "rul_mae_last_50_cycles": 28.9
+    },
+    "pca_baseline": {
+      "machines_tested": 15,
+      "detection_rate": 0.867,
+      "false_alarm_machines": 0.133,
+      "false_alarm_cycle_rate": 0.0034,
+      "mean_lead_time_cycles": 36.8,
+      "median_lead_time_cycles": 35.0,
+      "min_lead_time_cycles": 24,
+      "auroc_last_50_cycles": 0.9562,
+      "rul_mae_after_alarm": 84.5,
+      "rul_mae_last_50_cycles": 33.1
+    },
+    "test_units": [
+      3,
+      5,
+      9,
+      11,
+      17,
+      21,
+      24,
+      25,
+      28,
+      35,
+      43,
+      45,
+      52,
+      53,
+      58
+    ],
+    "train_units": [
+      1,
+      6,
+      7,
+      8,
+      10,
+      13,
+      14,
+      15,
+      16,
+      18,
+      20,
+      22,
+      23,
+      26,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      54,
+      57,
+      59,
+      60
+    ],
+    "epochs_run": 146,
+    "per_machine": [
+      {
+        "unit": 3,
+        "life": 229,
+        "degrade_start": 161,
+        "alarm_cycle": 210,
+        "lead_time": 19,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 5,
+        "life": 262,
+        "degrade_start": 191,
+        "alarm_cycle": 237,
+        "lead_time": 25,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 9,
+        "life": 209,
+        "degrade_start": 137,
+        "alarm_cycle": 176,
+        "lead_time": 33,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 11,
+        "life": 289,
+        "degrade_start": 168,
+        "alarm_cycle": 233,
+        "lead_time": 56,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 17,
+        "life": 248,
+        "degrade_start": 148,
+        "alarm_cycle": 205,
+        "lead_time": 43,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 21,
+        "life": 175,
+        "degrade_start": 118,
+        "alarm_cycle": 147,
+        "lead_time": 28,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 24,
+        "life": 224,
+        "degrade_start": 140,
+        "alarm_cycle": 182,
+        "lead_time": 42,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 25,
+        "life": 285,
+        "degrade_start": 210,
+        "alarm_cycle": 261,
+        "lead_time": 24,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 28,
+        "life": 280,
+        "degrade_start": 203,
+        "alarm_cycle": 137,
+        "lead_time": null,
+        "false_alarm": true,
+        "detected": false
+      },
+      {
+        "unit": 35,
+        "life": 262,
+        "degrade_start": 188,
+        "alarm_cycle": 237,
+        "lead_time": 25,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 43,
+        "life": 227,
+        "degrade_start": 156,
+        "alarm_cycle": 188,
+        "lead_time": 39,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 45,
+        "life": 225,
+        "degrade_start": 154,
+        "alarm_cycle": 207,
+        "lead_time": 18,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 52,
+        "life": 222,
+        "degrade_start": 153,
+        "alarm_cycle": 177,
+        "lead_time": 45,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 53,
+        "life": 210,
+        "degrade_start": 152,
+        "alarm_cycle": 184,
+        "lead_time": 26,
+        "false_alarm": false,
+        "detected": true
+      },
+      {
+        "unit": 58,
+        "life": 160,
+        "degrade_start": 108,
+        "alarm_cycle": 133,
+        "lead_time": 27,
+        "false_alarm": false,
+        "detected": true
+      }
+    ],
+    "evaluated_with_ground_truth": true
+  }
+}
